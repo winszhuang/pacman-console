@@ -7,7 +7,7 @@ final MAX_WIDTH = 20;
 main() {
   var currentPosition = [1, 1];
   var image = [
-    List.filled(MAX_WIDTH, '＊'),
+    List.filled(MAX_WIDTH, '＃'),
     genWall(),
     genWall(),
     genWall(),
@@ -26,7 +26,7 @@ main() {
     genWall(),
     genWall(),
     genWall(),
-    List.filled(MAX_WIDTH, '＊'),
+    List.filled(MAX_WIDTH, '＃'),
   ];
   stdin.echoMode = false;
   stdin.lineMode = false;
@@ -69,7 +69,8 @@ main() {
     for (var a = 0; a < image.length; a++) {
       for (var b = 0; b < image[a].length; b++) {
         if (currentPosition[1] == a && currentPosition[0] == b) {
-          str += 'Ｐ';
+          str += '\u001b[31mＰ\u001b[0m';
+          // str += 'Ｐ';
         } else {
           str += image[a][b];
         }
@@ -81,7 +82,7 @@ main() {
 }
 
 genWall() {
-  List<String> list = ['＊', '＊'];
+  List<String> list = ['＃', '＃'];
   list.insertAll(1, List.filled(20 - 2, '　'));
   return list;
 }
@@ -92,7 +93,7 @@ void printImage(String sign, int count) {
     if (a % 20 == 0) {
       str += '\n';
     } else {
-      str += '＊';
+      str += '＃';
     }
   }
   // stdout.writeln(str);
