@@ -7,26 +7,26 @@ final MAX_WIDTH = 20;
 main() {
   var currentPosition = [1, 1];
   var image = [
-    List.filled(MAX_WIDTH, '＃'),
-    genWall(),
-    genWall(),
-    genWall(),
-    genWall(),
-    genWall(),
-    genWall(),
-    genWall(),
-    genWall(),
-    genWall(),
-    genWall(),
-    genWall(),
-    genWall(),
-    genWall(),
-    genWall(),
-    genWall(),
-    genWall(),
-    genWall(),
-    genWall(),
-    List.filled(MAX_WIDTH, '＃'),
+    '＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃　　　　　　　　　　　　　　　　　　＃',
+    '＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃',
   ];
   stdin.echoMode = false;
   stdin.lineMode = false;
@@ -79,25 +79,6 @@ main() {
     }
     print(str);
   });
-}
-
-genWall() {
-  List<String> list = ['＃', '＃'];
-  list.insertAll(1, List.filled(20 - 2, '　'));
-  return list;
-}
-
-void printImage(String sign, int count) {
-  var str = '';
-  for (var a = 0; a < count; a++) {
-    if (a % 20 == 0) {
-      str += '\n';
-    } else {
-      str += '＃';
-    }
-  }
-  // stdout.writeln(str);
-  print(str);
 }
 
 void runtime(void callback(int number)) async {
